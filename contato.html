@@ -1,0 +1,1461 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Entre em contato com o Recanto Fábio. Veja endereço, horários, telefone, WhatsApp e como chegar."
+    />
+
+    <title>Contato | Recanto Fábio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="icon" type="image/png" href="assets/Icons/android-chrome-512x512.png">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css?v=site-20260903g" />
+
+    <style>
+      /* =========================================================
+         CONTATO
+         ========================================================= */
+
+      .contact-page {
+        background: var(--cream);
+      }
+
+      /* =========================================================
+         HERO
+         ========================================================= */
+
+      .contact-hero {
+        position: relative;
+
+        min-height: 590px;
+
+        display: flex;
+        align-items: flex-end;
+
+        overflow: hidden;
+
+        background: var(--deep);
+        color: #fff;
+      }
+
+      .contact-hero-media {
+        position: absolute;
+        inset: 0;
+
+        background:
+          linear-gradient(
+            90deg,
+            rgba(10, 23, 17, 0.9) 0%,
+            rgba(10, 23, 17, 0.55) 50%,
+            rgba(10, 23, 17, 0.15) 100%
+          ),
+          url("assets/Images/Imagens redimensionas/CLF_5563.jpg") center / cover no-repeat;
+      }
+
+      .contact-hero-content {
+        position: relative;
+        z-index: 1;
+
+        width: min(1180px, calc(100% - 64px));
+        margin: 0 auto;
+
+        padding: 145px 0 85px;
+      }
+
+      .page-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        margin-bottom: 30px;
+
+        color: rgba(255, 255, 255, 0.72);
+
+        font-size: 11px;
+        font-weight: 700;
+
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+
+        transition: color 0.2s;
+      }
+
+      .page-back:hover {
+        color: #fff;
+      }
+
+      .page-back span {
+        font-size: 17px;
+      }
+
+      .contact-hero h1 {
+        max-width: 850px;
+
+        margin: 0;
+
+        font-family: var(--font-display);
+
+        font-size: clamp(55px, 8vw, 105px);
+        font-weight: 500;
+
+        letter-spacing: -0.055em;
+        line-height: 0.92;
+      }
+
+      .contact-hero h1 span {
+        color: var(--gold);
+        font-weight: 500;
+      }
+
+      .contact-hero-copy {
+        max-width: 520px;
+
+        margin: 30px 0 0;
+
+        color: rgba(255, 255, 255, 0.82);
+
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      /* =========================================================
+         RESUMO DE CONTATO
+         ========================================================= */
+
+      .contact-summary {
+        padding: 125px 0;
+      }
+
+      .contact-summary-heading {
+        display: grid;
+        grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+        gap: 70px;
+      }
+
+      .contact-summary-heading h2 {
+        margin: 18px 0 0;
+      }
+
+      .contact-summary-heading > p:not(.eyebrow) {
+        align-self: end;
+        max-width: 510px;
+        margin: 0;
+
+        color: #536259;
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .contact-summary-grid {
+        display: grid;
+        grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr);
+        gap: 70px;
+        margin-top: 50px;
+      }
+
+      .contact-summary-details {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-content: start;
+        gap: 0 28px;
+      }
+
+      .contact-summary-card {
+        min-width: 0;
+        padding: 20px 0 24px;
+
+        border-top: 1px solid var(--line);
+      }
+
+      .contact-summary-card span,
+      .contact-summary-card strong,
+      .contact-summary-card a,
+      .contact-summary-card small {
+        display: block;
+      }
+
+      .contact-summary-card span {
+        margin-bottom: 10px;
+
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+      }
+
+      .contact-summary-card strong,
+      .contact-summary-card a {
+        color: var(--deep);
+        font-family: var(--font-display);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.12;
+      }
+
+      .contact-summary-card a:hover {
+        color: var(--gold-dark);
+      }
+
+      .contact-summary-card small {
+        margin-top: 8px;
+
+        color: #68756e;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      .contact-summary-map .map-wrapper {
+        height: 100%;
+        min-height: 460px;
+      }
+
+      /* =========================================================
+         CONTATO PRINCIPAL
+         ========================================================= */
+
+      .contact-main {
+        padding: 125px 0 140px;
+      }
+
+      .contact-main-grid {
+        display: grid;
+
+        grid-template-columns: 100px 1.15fr 0.85fr;
+
+        gap: 38px;
+      }
+
+      .contact-main-content {
+        grid-column: 2 / 4;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 80px;
+      }
+
+      .contact-main-copy h2 {
+        max-width: 700px;
+
+        margin: 18px 0 25px;
+      }
+
+      .contact-main-copy > p:not(.eyebrow) {
+        max-width: 580px;
+
+        margin: 0;
+
+        color: #536259;
+
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      /* =========================================================
+         DADOS DE CONTATO
+         ========================================================= */
+
+      .contact-details {
+        display: grid;
+
+        gap: 0;
+      }
+
+      .contact-detail {
+        padding: 23px 0;
+
+        border-top: 1px solid var(--line);
+      }
+
+      .contact-detail:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .contact-detail-label {
+        display: block;
+
+        margin-bottom: 8px;
+
+        color: var(--muted);
+
+        font-size: 10px;
+        font-weight: 700;
+
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .contact-detail a,
+      .contact-detail strong {
+        color: var(--deep);
+
+        font-family: var(--display);
+
+        font-size: 25px;
+        font-weight: 500;
+      }
+
+      .contact-detail a {
+        transition: color 0.2s;
+      }
+
+      .contact-detail a:hover {
+        color: var(--gold-dark);
+      }
+
+      .contact-detail small {
+        display: block;
+
+        margin-top: 5px;
+
+        color: #68756e;
+
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      /* =========================================================
+         MAPA
+         ========================================================= */
+
+      .map-section {
+        padding-bottom: 130px;
+      }
+
+      .map-head {
+        display: grid;
+
+        grid-template-columns: 100px 1fr;
+
+        gap: 38px;
+
+        margin-bottom: 50px;
+      }
+
+      .map-title h2 {
+        max-width: 700px;
+
+        margin: 18px 0 0;
+      }
+
+      .map-wrapper {
+        position: relative;
+
+        width: 100%;
+        height: 560px;
+
+        overflow: hidden;
+
+        background: #dfe3df;
+
+        border: 1px solid rgba(19, 48, 36, 0.08);
+      }
+
+      .map-wrapper iframe {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        border: 0;
+
+        filter: saturate(0.82);
+      }
+
+      .map-overlay {
+        position: absolute;
+
+        left: 30px;
+        bottom: 30px;
+
+        max-width: 350px;
+
+        padding: 27px 30px;
+
+        background: rgba(10, 23, 17, 0.92);
+
+        color: #fff;
+
+        backdrop-filter: blur(10px);
+      }
+
+      .map-overlay span {
+        display: block;
+
+        margin-bottom: 8px;
+
+        color: var(--gold);
+
+        font-size: 10px;
+        font-weight: 700;
+
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .map-overlay strong {
+        display: block;
+
+        font-family: var(--display);
+
+        font-size: 24px;
+        font-weight: 500;
+
+        line-height: 1.15;
+      }
+
+      .map-overlay p {
+        margin: 8px 0 0;
+
+        color: rgba(255, 255, 255, 0.68);
+
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      /* =========================================================
+         HORÁRIOS
+         ========================================================= */
+
+      .hours-section {
+        padding: 120px 0;
+
+        background: var(--sand);
+      }
+
+      .hours-grid {
+        display: grid;
+
+        grid-template-columns: 100px 1fr 1fr;
+
+        gap: 38px;
+      }
+
+      .hours-content {
+        grid-column: 2 / 4;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 80px;
+      }
+
+      .hours-copy h2 {
+        margin: 18px 0 25px;
+      }
+
+      .hours-copy p:not(.eyebrow) {
+        max-width: 520px;
+
+        margin: 0;
+
+        color: #536259;
+
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .hours-list {
+        display: grid;
+
+        gap: 0;
+      }
+
+      .hours-row {
+        display: grid;
+
+        grid-template-columns: 1fr auto;
+
+        gap: 30px;
+
+        padding: 17px 0;
+
+        border-top: 1px solid rgba(19, 48, 36, 0.15);
+      }
+
+      .hours-row:last-child {
+        border-bottom: 1px solid rgba(19, 48, 36, 0.15);
+      }
+
+      .hours-row span:first-child {
+        color: var(--deep);
+
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .hours-row span:last-child {
+        color: #536259;
+
+        font-size: 14px;
+
+        text-align: right;
+      }
+
+      /* =========================================================
+         REDES SOCIAIS
+         ========================================================= */
+
+      .social-section {
+        padding: 125px 0;
+      }
+
+      .social-grid {
+        display: grid;
+
+        grid-template-columns: 100px 1fr 1fr;
+
+        gap: 38px;
+      }
+
+      .social-content {
+        grid-column: 2 / 4;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 80px;
+      }
+
+      .social-copy h2 {
+        margin: 18px 0 25px;
+      }
+
+      .social-copy p:not(.eyebrow) {
+        max-width: 530px;
+
+        margin: 0;
+
+        color: #536259;
+
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .social-links {
+        display: grid;
+
+        align-content: start;
+
+        gap: 0;
+      }
+
+      .social-link {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 22px 0;
+
+        border-top: 1px solid var(--line);
+
+        color: var(--deep);
+
+        transition: color 0.2s;
+      }
+
+      .social-link:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .social-link:hover {
+        color: var(--gold-dark);
+      }
+
+      .social-link strong {
+        font-family: var(--display);
+
+        font-size: 23px;
+        font-weight: 500;
+      }
+
+      .social-link span {
+        font-size: 18px;
+      }
+
+      /* =========================================================
+         CTA WHATSAPP
+         ========================================================= */
+
+      .contact-cta {
+        padding: 120px 0;
+
+        background: var(--deep);
+
+        color: #fff;
+      }
+
+      .contact-cta-grid {
+        display: grid;
+
+        grid-template-columns: 100px 1fr;
+
+        gap: 38px;
+      }
+
+      .contact-cta-content {
+        grid-column: 2;
+        max-width: 850px;
+      }
+
+      .contact-cta-content h2 {
+        max-width: 800px;
+
+        margin: 18px 0 25px;
+      }
+
+      .contact-cta-content p {
+        max-width: 580px;
+
+        margin: 0 0 30px;
+
+        color: rgba(255, 255, 255, 0.7);
+
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .contact-cta-actions {
+        display: flex;
+
+        align-items: center;
+
+        gap: 25px;
+      }
+
+      /* =========================================================
+         RESPONSIVO
+         ========================================================= */
+
+      @media (max-width: 800px) {
+
+        .contact-hero {
+          min-height: 590px;
+        }
+
+        .contact-hero-content {
+          width: min(100% - 40px, 620px);
+
+          padding: 125px 0 65px;
+        }
+
+        .contact-hero h1 {
+          font-size: clamp(50px, 15vw, 72px);
+        }
+
+        .contact-hero-copy {
+          font-size: 16px;
+        }
+
+        .contact-summary {
+          padding: 85px 0;
+        }
+
+        .contact-summary-heading,
+        .contact-summary-grid {
+          grid-template-columns: 1fr;
+          gap: 34px;
+        }
+
+        .contact-summary-grid {
+          margin-top: 38px;
+        }
+
+        .contact-summary-details {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-summary-card strong,
+        .contact-summary-card a {
+          font-size: 22px;
+        }
+
+        .contact-summary-map .map-wrapper {
+          min-height: 420px;
+        }
+
+        .contact-main {
+          padding: 85px 0 90px;
+        }
+
+        .contact-main-grid {
+          grid-template-columns: 1fr;
+
+          gap: 22px;
+        }
+
+        .contact-main-content {
+          grid-column: auto;
+
+          grid-template-columns: 1fr;
+
+          gap: 50px;
+        }
+
+        .contact-detail a,
+        .contact-detail strong {
+          font-size: 22px;
+        }
+
+        .map-section {
+          padding-bottom: 90px;
+        }
+
+        .map-head {
+          grid-template-columns: 1fr;
+
+          gap: 15px;
+
+          margin-bottom: 35px;
+        }
+
+        .map-wrapper {
+          height: 500px;
+        }
+
+        .map-overlay {
+          right: 15px;
+          bottom: 15px;
+          left: 15px;
+
+          max-width: none;
+        }
+
+        .hours-section {
+          padding: 85px 0;
+        }
+
+        .hours-grid {
+          grid-template-columns: 1fr;
+
+          gap: 22px;
+        }
+
+        .hours-content {
+          grid-column: auto;
+
+          grid-template-columns: 1fr;
+
+          gap: 45px;
+        }
+
+        .social-section {
+          padding: 90px 0;
+        }
+
+        .social-grid {
+          grid-template-columns: 1fr;
+
+          gap: 22px;
+        }
+
+        .social-content {
+          grid-column: auto;
+
+          grid-template-columns: 1fr;
+
+          gap: 45px;
+        }
+
+        .contact-cta {
+          padding: 85px 0;
+        }
+
+        .contact-cta-grid {
+          grid-template-columns: 1fr;
+
+          gap: 22px;
+        }
+
+        .contact-cta-content {
+          grid-column: auto;
+        }
+
+        .contact-cta-actions {
+          align-items: flex-start;
+
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+
+  <body class="contact-page">
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header" id="topo">
+
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Recanto Fábio — início"
+      >
+        <span>
+          <img src="assets/Icons/Logo_Restaurante_Recanto_Fábio_0,5.png" alt="Logotipo do Recanto Fábio" />
+        </span>
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <span class="sr-only">
+          Abrir menu
+        </span>
+      </button>
+
+
+      <nav
+        class="main-nav"
+        id="main-nav"
+        aria-label="Principal"
+      >
+        <a href="index.html">Início</a>
+        <a href="gastronomia.html">Gastronomia</a>
+        <a href="recanto.html">O Recanto</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+
+
+      <a
+        class="header-action"
+        href="https://wa.me/5547988638713"
+        target="_blank"
+        rel="noreferrer"
+      >
+        WhatsApp
+      </a>
+
+    </header>
+
+
+    <main>
+
+      <!-- =====================================================
+           HERO
+           ===================================================== -->
+
+      <section class="contact-hero">
+
+        <div class="contact-hero-media"></div>
+
+
+        <div class="contact-hero-content">
+
+          <a
+            class="page-back"
+            href="index.html"
+          >
+            <span>←</span>
+            Voltar ao início
+          </a>
+
+
+          <p class="eyebrow eyebrow-light">
+            Contato
+          </p>
+
+
+          <h1>
+            ESTAMOS<br />
+            <span>ESPERANDO VOCÊ.</span>
+          </h1>
+
+
+          <p class="contact-hero-copy">
+            Encontre o Recanto Fábio, tire suas dúvidas
+            ou fale diretamente com nossa equipe.
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class="contact-summary">
+        <div class="page-width">
+          <div class="contact-summary-heading">
+            <div>
+              <p class="eyebrow">Informações</p>
+              <h2>TUDO O QUE VOCÊ<br />PRECISA PARA CHEGAR.</h2>
+            </div>
+            <p>Estamos na Praia da Ilhota, em Itapema. Para dúvidas, eventos ou informações, nossa equipe está a uma mensagem de distância.</p>
+          </div>
+
+          <div class="contact-summary-grid">
+            <div class="contact-summary-details">
+              <article class="contact-summary-card">
+                <span>WhatsApp</span>
+                <a href="https://wa.me/5547988638713" target="_blank" rel="noreferrer">Falar com a equipe ↗</a>
+                <small>Atendimento direto pelo celular.</small>
+              </article>
+              <article class="contact-summary-card">
+                <span>Telefone</span>
+                <a href="tel:+554733687200">(47) 3368-7200</a>
+                <small>Para informações sobre o restaurante.</small>
+              </article>
+              <article class="contact-summary-card">
+                <span>Endereço</span>
+                <strong>Praia da Ilhota</strong>
+                <small>R. 1106, 300 · Itapema · SC</small>
+              </article>
+              <article class="contact-summary-card">
+                <span>Horário</span>
+                <strong>Todos os dias</strong>
+                <small>Das 11h às 23h.</small>
+              </article>
+            </div>
+
+            <div class="contact-summary-map">
+              <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps?q=Recanto%20Fabio%20Itapema%20SC&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de localização do Recanto Fábio"></iframe>
+                <div class="map-overlay">
+                  <span>Localização</span>
+                  <strong>Praia da Ilhota</strong>
+                  <p>Itapema · Santa Catarina</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           CONTATO PRINCIPAL
+           ===================================================== -->
+
+      <section class="contact-main" hidden>
+
+        <div class="page-width contact-main-grid">
+
+          <div class="contact-main-content">
+
+            <div class="contact-main-copy">
+
+              <p class="eyebrow">
+                Fale conosco
+              </p>
+
+
+              <h2>
+                Quando precisar,<br />
+                <em>é só chamar.</em>
+              </h2>
+
+
+              <p>
+                Para dúvidas, informações sobre o restaurante
+                ou assuntos relacionados a eventos, nossa equipe
+                está à disposição para atender você.
+              </p>
+
+            </div>
+
+
+            <div class="contact-details">
+
+              <!-- WHATSAPP -->
+
+              <div class="contact-detail">
+
+                <span class="contact-detail-label">
+                  WhatsApp
+                </span>
+
+
+                <a
+                  href="https://wa.me/5547988638713"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Falar pelo WhatsApp ↗
+                </a>
+
+
+                <small>
+                  Atendimento direto pelo celular.
+                </small>
+
+              </div>
+
+
+              <!-- TELEFONE -->
+
+              <div class="contact-detail">
+
+                <span class="contact-detail-label">
+                  Telefone
+                </span>
+
+
+                <a href="tel:+554733687200">
+                  (47) 3368-7200
+                </a>
+
+
+                <small>
+                  Entre em contato com o restaurante.
+                </small>
+
+              </div>
+
+
+              <!-- ENDEREÇO -->
+
+              <div class="contact-detail">
+
+                <span class="contact-detail-label">
+                  Endereço
+                </span>
+
+
+                <strong>
+                  Praia da Ilhota
+                </strong>
+
+
+                <small>
+                  Itapema · Santa Catarina
+                </small>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           MAPA
+           ===================================================== -->
+
+      <section class="map-section" hidden>
+
+        <div class="page-width">
+
+          <div class="map-head">
+
+            <div class="map-title">
+
+              <p class="eyebrow">
+                Como chegar
+              </p>
+
+
+              <h2>
+                O Recanto está<br />
+                <em>na Praia da Ilhota.</em>
+              </h2>
+
+            </div>
+
+          </div>
+
+
+          <div class="map-wrapper">
+
+            <!--
+              IMPORTANTE:
+              Substituir este iframe pelo link/embed oficial
+              do Google Maps do restaurante quando tivermos
+              a localização exata confirmada.
+            -->
+
+            <iframe
+              src="https://www.google.com/maps?q=Recanto%20Fabio%20Itapema%20SC&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de localização do Recanto Fábio"
+            >
+            </iframe>
+
+
+            <div class="map-overlay">
+
+              <span>
+                Localização
+              </span>
+
+
+              <strong>
+                Praia da Ilhota
+              </strong>
+
+
+              <p>
+                Itapema · Santa Catarina
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           HORÁRIOS
+           ===================================================== -->
+
+      <section class="hours-section" hidden>
+
+        <div class="page-width hours-grid">
+
+          <div class="hours-content">
+
+            <div class="hours-copy">
+
+              <p class="eyebrow">
+                Horários
+              </p>
+
+
+              <h2>
+                Escolha seu momento<br />
+                <span>e venha.</span>
+              </h2>
+
+
+              <p>
+                Confira nossos horários de funcionamento antes
+                de programar sua visita.
+              </p>
+
+            </div>
+
+
+            <div class="hours-list">
+
+              <!--
+                HORÁRIOS PROVISÓRIOS
+
+                CONFIRMAR COM FÁBIO/ANA ANTES DA PUBLICAÇÃO.
+              -->
+
+              <div class="hours-row">
+
+                <span>
+                  Segunda-feira
+                </span>
+
+                <span>
+                  11h às 23h
+                </span>
+
+              </div>
+
+
+              <div class="hours-row">
+
+                <span>
+                  Terça-feira
+                </span>
+
+                <span>
+                  11h às 23h
+                </span>
+
+              </div>
+
+
+              <div class="hours-row">
+
+                <span>
+                  Quarta-feira
+                </span>
+
+                <span>
+                  11h às 23h
+                </span>
+
+              </div>
+
+
+              <div class="hours-row">
+
+                <span>
+                  Quinta-feira
+                </span>
+
+                <span>
+                  11h às 23h
+                </span>
+
+              </div>
+
+
+              <div class="hours-row">
+
+                <span>
+                  Sexta-feira
+                </span>
+
+                <span>
+                  11h às 23h
+                </span>
+
+              </div>
+
+
+              <div class="hours-row">
+
+                <span>
+                  Sábado
+                </span>
+
+                <span>
+                  11h às 23h
+                </span>
+
+              </div>
+
+
+              <div class="hours-row">
+
+                <span>
+                  Domingo
+                </span>
+
+                <span>
+                  11h às 23h
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           REDES SOCIAIS
+           ===================================================== -->
+
+      <section class="social-section" hidden>
+
+        <div class="page-width social-grid">
+
+          <div class="social-content">
+
+            <div class="social-copy">
+
+              <p class="eyebrow">
+                Redes sociais
+              </p>
+
+
+              <h2>
+                Continue acompanhando<br />
+                <em>o Recanto.</em>
+              </h2>
+
+
+              <p>
+                Acompanhe novidades, pratos, momentos especiais
+                e tudo o que acontece por aqui através das
+                nossas redes sociais.
+              </p>
+
+            </div>
+
+
+            <div class="social-links">
+
+              <a
+                class="social-link"
+                href="https://www.instagram.com/recantorestaurantefabio/"
+                target="_blank"
+                rel="noreferrer"
+              >
+
+                <strong>
+                  Instagram
+                </strong>
+
+                <span>
+                  ↗
+                </span>
+
+              </a>
+
+
+              <a
+                class="social-link"
+                href="https://wa.me/5547988638713"
+                target="_blank"
+                rel="noreferrer"
+              >
+
+                <strong>
+                  WhatsApp
+                </strong>
+
+                <span>
+                  ↗
+                </span>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           CTA
+           ===================================================== -->
+
+      <section class="contact-cta">
+
+        <div class="page-width contact-cta-grid">
+
+          <div class="contact-cta-content">
+
+            <p class="eyebrow eyebrow-light">
+              Recanto Fábio
+            </p>
+
+
+            <h2>
+              UMA BOA EXPERIÊNCIA<br />
+              COMEÇA <em>ANTES DA CHEGADA.</em>
+            </h2>
+
+
+            <p>
+              Se ficou alguma dúvida, fale conosco.
+              Nossa equipe está pronta para ajudar.
+            </p>
+
+
+            <div class="contact-cta-actions">
+
+              <a
+                class="button button-light"
+                href="https://wa.me/5547988638713"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Falar pelo WhatsApp
+                <span>↗</span>
+              </a>
+
+
+              <a
+                class="text-link text-link-light"
+                href="https://www.google.com/maps/search/?api=1&query=Recanto+Fabio+Itapema+SC"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Abrir no Google Maps
+                <span>→</span>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+      <div class="page-width footer-main">
+
+        <a
+          class="brand brand-footer"
+          href="index.html"
+        >
+
+          <span><img src="assets/Icons/Logo_Restaurante_Recanto_Fábio_0,5.png" alt="Logotipo do Recanto Fábio" /></span>
+
+        </a>
+
+
+        <p>
+          Gastronomia, mar e encontros especiais<br />
+          na Praia da Ilhota.
+        </p>
+
+
+        <div class="footer-links">
+          <a href="https://www.instagram.com/recantorestaurantefabio/" target="_blank" rel="noreferrer">Instagram ↗</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Recanto+Fabio+Itapema" target="_blank" rel="noreferrer">R. 1106, 300 · Ilhota ↗</a>
+          <a href="https://wa.me/5547988638713" target="_blank" rel="noreferrer">WhatsApp (47) 9 8863-8713 ↗</a>
+        </div>
+
+      </div>
+
+
+      <div class="page-width footer-bottom">
+
+        <span>
+          © <span id="year"></span> Recanto Fábio
+        </span>
+
+
+        <span>
+          Itapema · SC
+        </span>
+
+      </div>
+
+    </footer>
+
+
+    <script src="script.js?v=site-20260903b"></script>
+
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Carta de vinhos do Recanto Fábio, na Praia da Ilhota, em Itapema." />
+    <title>Carta de Vinhos | Recanto Fábio</title>
+    <link rel="stylesheet" href="styles.css?v=site-20260903g" />
+    <link rel="icon" type="image/png" href="assets/Icons/android-chrome-512x512.png" />
+  </head>
+  <body class="wine-page">
+    <header class="site-header" id="topo">
+      <a class="brand" href="index.html" aria-label="Recanto Fábio - início">
+        <span><img src="assets/Icons/Logo_Restaurante_Recanto_Fábio_0,5.png" alt="Logotipo do Recanto Fábio" /></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span><span class="sr-only">Abrir menu</span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Principal">
+        <a href="index.html">Início</a>
+        <a href="gastronomia.html" aria-current="page">Gastronomia</a>
+        <a href="recanto.html">O Recanto</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <a class="header-action" href="https://wa.me/5547988638713" target="_blank" rel="noreferrer">WhatsApp</a>
+    </header>
+
+    <main>
+      <section class="wine-hero">
+        <div class="wine-hero-media" style="background-image: url('assets/Images/Imagens redimensionas/CLF_5563.jpg');"></div>
+        <div class="wine-hero-shade"></div>
+        <div class="page-width wine-hero-content">
+          <a class="page-back" href="gastronomia.html"><span>←</span> Voltar à gastronomia</a>
+          <p class="eyebrow eyebrow-light">Recanto Fábio · Praia da Ilhota</p>
+          <h1>NOSSA<br /><strong>CARTA</strong><br />DE VINHOS.</h1>
+          <p>Rótulos selecionados para fazer da sua mesa uma experiência ainda mais especial.</p>
+          <a class="wine-hero-button" href="#selecionar-vinhos">CONHEÇA A SELEÇÃO <span>↓</span></a>
+          <div class="wine-hero-info">
+            <span><b data-wine-count>72 rótulos</b> para descobrir</span>
+            <span>Sem valores no site · disponibilidade com a equipe</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="wine-intro page-width" id="selecionar-vinhos">
+        <div>
+          <p class="eyebrow">Vinhos para cada momento</p>
+          <h2>DESCUBRA<br />O RÓTULO <em>CERTO.</em></h2>
+        </div>
+        <p>Da leveza dos brancos à profundidade dos grandes tintos, explore a seleção completa do Recanto. Para disponibilidade e harmonizações, fale com a nossa equipe.</p>
+        <a class="text-link" href="https://wa.me/5547988638713" target="_blank" rel="noreferrer">Falar com a equipe <span>↗</span></a>
+      </section>
+
+      <nav class="wine-filters-wrap" aria-label="Filtrar a carta de vinhos">
+        <div class="page-width wine-filters" data-wine-filters></div>
+      </nav>
+
+      <div data-wine-catalogue></div>
+
+      <section class="wine-contact">
+        <div class="page-width wine-contact-inner">
+          <p class="eyebrow eyebrow-light">Fale com a nossa equipe</p>
+          <h2>UM BRINDE<br />AO <em>ENCONTRO.</em></h2>
+          <p>Consulte nossa equipe sobre disponibilidade de safras e sugestões de harmonização para o seu pedido.</p>
+          <a class="wine-contact-button" href="https://wa.me/5547988638713" target="_blank" rel="noreferrer">FALAR NO WHATSAPP <span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-width footer-main">
+        <a class="brand brand-footer" href="index.html"><span><img src="assets/Icons/Logo_Restaurante_Recanto_Fábio_0,5.png" alt="Logotipo do Recanto Fábio" /></span></a>
+        <p>Gastronomia, mar e encontros especiais<br />na Praia da Ilhota.</p>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/recantorestaurantefabio/" target="_blank" rel="noreferrer">Instagram ↗</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Recanto+Fabio+Itapema" target="_blank" rel="noreferrer">R. 1106, 300 · Ilhota ↗</a>
+          <a href="https://wa.me/5547988638713" target="_blank" rel="noreferrer">WhatsApp (47) 9 8863-8713 ↗</a>
+        </div>
+      </div>
+      <div class="page-width footer-bottom"><span>© <span id="year"></span> Recanto Fábio</span><span>Itapema · SC</span></div>
+    </footer>
+    <script src="script.js?v=site-20260903b"></script>
+    <script src="carta-vinhos-data.js?v=site-20260903a"></script>
+  </body>
+</html>

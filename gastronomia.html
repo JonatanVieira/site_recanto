@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Conheça a gastronomia do Recanto Fábio, em Itapema. Confira nosso cardápio e carta de vinhos."
+    />
+
+    <title>Gastronomia | Recanto Fábio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="assets/Icons/android-chrome-512x512.png">
+
+    <link rel="stylesheet" href="styles.css?v=site-20260903g" />
+
+    <style>
+      /* =========================================================
+         GASTRONOMIA
+         ========================================================= */
+
+      .gastronomy-page {
+        background: var(--cream);
+      }
+
+      /* Hero */
+
+      .gastronomy-hero {
+        position: relative;
+        min-height: 620px;
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+        background: var(--deep);
+        color: #fff;
+      }
+
+      .gastronomy-hero-media {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(10, 23, 17, 0.86) 0%,
+            rgba(10, 23, 17, 0.54) 48%,
+            rgba(10, 23, 17, 0.18) 100%
+          ),
+          url("assets/Images/Imagens redimensionas/DY8A5037.jpg") center / cover no-repeat;
+      }
+
+      .gastronomy-hero-content {
+        position: relative;
+        z-index: 1;
+        width: min(1180px, calc(100% - 64px));
+        margin: 0 auto;
+        padding: 150px 0 85px;
+      }
+
+      .gastronomy-hero h1 {
+        max-width: 850px;
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: clamp(55px, 8vw, 105px);
+        font-weight: 500;
+        letter-spacing: -0.055em;
+        line-height: 0.92;
+        text-transform: uppercase;
+      }
+
+      .gastronomy-hero h1 em {
+        color: var(--gold);
+        font-weight: 500;
+      }
+
+      .gastronomy-hero-copy {
+        max-width: 500px;
+        margin: 30px 0 0;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 18px;
+      }
+
+      .page-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 30px;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        transition: color 0.2s;
+      }
+
+      .page-back:hover {
+        color: #fff;
+      }
+
+      .page-back span {
+        font-size: 17px;
+      }
+
+      /* Introdução */
+
+      .gastronomy-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 38px;
+        padding-top: 130px;
+        padding-bottom: 110px;
+      }
+
+      .gastronomy-intro-copy {
+        grid-column: 1 / 3;
+        max-width: 850px;
+      }
+
+      .gastronomy-intro-copy h2 {
+        margin: 20px 0 25px;
+      }
+
+      .gastronomy-intro-copy p:not(.eyebrow) {
+        max-width: 680px;
+        margin: 0;
+        color: #536259;
+        font-size: 18px;
+      }
+
+      /* Cards */
+
+      .gastronomy-options {
+        padding: 0 0 150px;
+      }
+
+      .gastronomy-options-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .gastronomy-option {
+        position: relative;
+        min-height: 570px;
+        overflow: hidden;
+        color: #fff;
+        background: var(--deep);
+      }
+
+      .gastronomy-option-media {
+        position: absolute;
+        inset: 0;
+        transition: transform 0.7s ease;
+      }
+
+      .gastronomy-option:hover .gastronomy-option-media {
+        transform: scale(1.045);
+      }
+
+      .gastronomy-option-media::after {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          0deg,
+          rgba(10, 23, 17, 0.9) 0%,
+          rgba(10, 23, 17, 0.35) 55%,
+          rgba(10, 23, 17, 0.08) 100%
+        );
+        content: "";
+      }
+
+      .gastronomy-option-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .gastronomy-option-content {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 42px;
+      }
+
+      .gastronomy-option-number {
+        display: block;
+        margin-bottom: 15px;
+        color: var(--gold);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+      }
+
+      .gastronomy-option h3 {
+        margin: 0 0 12px;
+        font-family: var(--display);
+        font-size: clamp(38px, 4vw, 56px);
+        font-weight: 500;
+        letter-spacing: -0.04em;
+        line-height: 0.95;
+      }
+
+      .gastronomy-option p {
+        max-width: 400px;
+        margin: 0 0 27px;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 15px;
+      }
+
+      .gastronomy-option-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 13px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+        padding-bottom: 6px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .gastronomy-option-link span {
+        font-size: 18px;
+        transition: transform 0.2s;
+      }
+
+      .gastronomy-option:hover .gastronomy-option-link span {
+        transform: translateX(5px);
+      }
+
+      /* Avaliações gastronômicas */
+
+      .food-reviews {
+        padding: 110px 0;
+        overflow: hidden;
+        background: var(--deep);
+        color: #fff;
+      }
+
+      .food-reviews-head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 42px;
+      }
+
+      .food-reviews-head h2 {
+        max-width: 640px;
+        margin: 14px 0 0;
+      }
+
+      .food-reviews-head h2 em {
+        color: var(--gold);
+        font-style: normal;
+      }
+
+      .food-reviews-rating {
+        color: var(--gold);
+        font-family: var(--font-display);
+        font-size: 32px;
+        white-space: nowrap;
+      }
+
+      .food-reviews-rating small {
+        display: block;
+        margin-top: 8px;
+        color: rgba(255, 255, 255, 0.66);
+        font-family: var(--font-body);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .food-reviews-marquee {
+        overflow: hidden;
+      }
+
+      .food-reviews-track {
+        display: flex;
+        width: max-content;
+        gap: 18px;
+        animation: food-reviews-scroll 42s linear infinite;
+      }
+
+      .food-reviews-marquee:hover .food-reviews-track {
+        animation-play-state: paused;
+      }
+
+      .food-review-card {
+        width: min(360px, calc(100vw - 72px));
+        min-height: 220px;
+        padding: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .food-review-card b {
+        display: block;
+        margin-bottom: 22px;
+        color: var(--gold);
+        font-size: 13px;
+        letter-spacing: 0.12em;
+      }
+
+      .food-review-card p {
+        margin: 0 0 22px;
+        color: rgba(255, 255, 255, 0.92);
+        font-family: var(--font-display);
+        font-size: 22px;
+        line-height: 1.35;
+      }
+
+      .food-review-card span {
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      @keyframes food-reviews-scroll {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Responsivo */
+
+      @media (max-width: 800px) {
+        .gastronomy-hero {
+          min-height: 620px;
+        }
+
+        .gastronomy-hero-content {
+          width: min(100% - 40px, 620px);
+          padding: 125px 0 65px;
+        }
+
+        .gastronomy-hero h1 {
+          font-size: clamp(50px, 15vw, 72px);
+        }
+
+        .gastronomy-hero-copy {
+          font-size: 16px;
+        }
+
+        .gastronomy-intro {
+          grid-template-columns: 1fr;
+          gap: 22px;
+          padding-top: 90px;
+          padding-bottom: 75px;
+        }
+
+        .gastronomy-intro-copy {
+          grid-column: auto;
+        }
+
+        .gastronomy-options {
+          padding-bottom: 90px;
+        }
+
+        .gastronomy-options-grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+
+        .gastronomy-option {
+          min-height: 480px;
+        }
+
+        .gastronomy-option-content {
+          padding: 30px;
+        }
+
+        .food-reviews {
+          padding: 80px 0;
+        }
+
+        .food-reviews-head {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 24px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="gastronomy-page">
+    <!-- =======================================================
+         HEADER
+         ======================================================= -->
+
+    <header class="site-header" id="topo">
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Recanto Fábio — início"
+      >
+        <span>
+          <img src="assets/Icons/Logo_Restaurante_Recanto_Fábio_0,5.png" alt="Logotipo do Recanto Fábio" />
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Abrir menu</span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Principal">
+        <a href="index.html">Início</a>
+        <a href="gastronomia.html">Gastronomia</a>
+        <a href="recanto.html">O Recanto</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+
+      <a
+        class="header-action"
+        href="https://wa.me/5547988638713"
+        target="_blank"
+        rel="noreferrer"
+      >
+        WhatsApp
+      </a>
+    </header>
+
+    <main>
+      <!-- =====================================================
+           HERO
+           ===================================================== -->
+
+      <section class="gastronomy-hero">
+        <div class="gastronomy-hero-media"></div>
+
+        <div class="gastronomy-hero-content">
+          <a class="page-back" href="index.html">
+            <span>←</span>
+            Voltar ao início
+          </a>
+
+          <p class="eyebrow eyebrow-light">
+            Gastronomia
+          </p>
+
+          <h1>
+            SABORES QUE FAZEM PARTE<br />
+            DA EXPERIÊNCIA.
+          </h1>
+
+          <p class="gastronomy-hero-copy">
+            Uma cozinha inspirada pelo litoral, pelo frescor dos ingredientes
+            e pela experiência de estar à mesa diante do mar.
+          </p>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           INTRODUÇÃO
+           ===================================================== -->
+
+      <section class="gastronomy-intro page-width">
+        <div class="gastronomy-intro-copy">
+          <p class="eyebrow">Nossa gastronomia</p>
+
+          <h2>
+            DA COZINHA À MESA,<br />
+            UMA EXPERIÊNCIA.
+          </h2>
+
+          <p>
+            Conheça as opções gastronômicas do Recanto Fábio e descubra
+            sabores preparados para acompanhar bons momentos à beira-mar.
+          </p>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           OPÇÕES
+           ===================================================== -->
+
+      <section class="gastronomy-options">
+        <div class="page-width">
+          <div class="gastronomy-options-grid">
+
+            <!-- CARDÁPIO -->
+
+            <a class="gastronomy-option" href="cardapio.html">
+              <div class="gastronomy-option-media">
+                <img
+                  src="assets/Images/Imagens redimensionas/DY8A5037.jpg"
+                  alt="Prato servido no Recanto Fábio"
+                />
+              </div>
+
+              <div class="gastronomy-option-content">
+                <h3>Cardápio</h3>
+
+                <p>
+                  Conheça nossa seleção de pratos e descubra os sabores
+                  que fazem parte da experiência do Recanto.
+                </p>
+
+                <span class="gastronomy-option-link">
+                  Conhecer o cardápio
+                  <span>→</span>
+                </span>
+              </div>
+            </a>
+
+            <!-- CARTA DE VINHOS -->
+
+            <a class="gastronomy-option" href="carta-de-vinhos.html">
+              <div class="gastronomy-option-media">
+                <img
+                  src="assets/Images/Imagens redimensionas/CLF_5532.jpg"
+                  alt="Ambiente do Recanto Fábio"
+                />
+              </div>
+
+              <div class="gastronomy-option-content">
+                <h3>Carta de Vinhos</h3>
+
+                <p>
+                  Uma seleção pensada para acompanhar nossa gastronomia
+                  e tornar cada encontro ainda mais especial.
+                </p>
+
+                <span class="gastronomy-option-link">
+                  Conhecer a carta
+                  <span>→</span>
+                </span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           AVALIAÇÕES GASTRONÔMICAS
+           ===================================================== -->
+
+      <section class="food-reviews" aria-labelledby="food-reviews-title">
+        <div class="page-width">
+          <div class="food-reviews-head">
+            <div>
+              <p class="eyebrow eyebrow-light">Quem prova, recomenda</p>
+              <h2 id="food-reviews-title">SABORES QUE<br /><em>FICAM NA MEMÓRIA.</em></h2>
+            </div>
+            <div class="food-reviews-rating">★ 4,7<small>no Google</small></div>
+          </div>
+        </div>
+
+        <div class="food-reviews-marquee">
+          <div class="food-reviews-track">
+            <article class="food-review-card"><b>★★★★★</b><p>“Camarões muito saborosos e prato muito bem servido.”</p><span>— Cliente Google</span></article>
+            <article class="food-review-card"><b>★★★★★</b><p>“Frutos do mar frescos, comida impecável e atendimento excelente.”</p><span>— Cliente Google</span></article>
+            <article class="food-review-card"><b>★★★★★</b><p>“A moqueca é maravilhosa. Uma experiência para voltar sempre.”</p><span>— Cliente Google</span></article>
+            <article class="food-review-card"><b>★★★★★</b><p>“Porções generosas, muito sabor e uma vista incrível para acompanhar.”</p><span>— Cliente Google</span></article>
+            <article class="food-review-card"><b>★★★★★</b><p>“Camarões muito saborosos e prato muito bem servido.”</p><span>— Cliente Google</span></article>
+            <article class="food-review-card"><b>★★★★★</b><p>“Frutos do mar frescos, comida impecável e atendimento excelente.”</p><span>— Cliente Google</span></article>
+            <article class="food-review-card"><b>★★★★★</b><p>“A moqueca é maravilhosa. Uma experiência para voltar sempre.”</p><span>— Cliente Google</span></article>
+            <article class="food-review-card"><b>★★★★★</b><p>“Porções generosas, muito sabor e uma vista incrível para acompanhar.”</p><span>— Cliente Google</span></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =======================================================
+         FOOTER
+         ======================================================= -->
+
+    <footer class="site-footer">
+      <div class="page-width footer-main">
+        <a class="brand brand-footer" href="index.html">
+          <span><img src="assets/Icons/Logo_Restaurante_Recanto_Fábio_0,5.png" alt="Logotipo do Recanto Fábio" /></span>
+        </a>
+
+        <p>
+          Gastronomia, mar e encontros especiais<br />
+          na Praia da Ilhota.
+        </p>
+
+        <div class="footer-links">
+          <a href="https://www.instagram.com/recantorestaurantefabio/" target="_blank" rel="noreferrer">Instagram ↗</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Recanto+Fabio+Itapema" target="_blank" rel="noreferrer">R. 1106, 300 · Ilhota ↗</a>
+          <a href="https://wa.me/5547988638713" target="_blank" rel="noreferrer">WhatsApp (47) 9 8863-8713 ↗</a>
+        </div>
+      </div>
+
+      <div class="page-width footer-bottom">
+        <span>© <span id="year"></span> Recanto Fábio</span>
+        <span>Itapema · SC</span>
+      </div>
+    </footer>
+
+    <script src="script.js?v=site-20260903b"></script>
+  </body>
+</html>

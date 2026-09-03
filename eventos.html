@@ -1,0 +1,1303 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Eventos no Recanto Fábio, em Itapema. Um cenário especial à beira-mar para celebrações, encontros e ocasiões especiais."
+    />
+
+    <title>Eventos | Recanto Fábio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="icon" type="image/png" href="assets/Icons/android-chrome-512x512.png">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css?v=site-20260903g" />
+
+    <style>
+      /* =========================================================
+         EVENTOS
+         ========================================================= */
+
+      .events-page {
+        background: var(--cream);
+      }
+
+      /* =========================================================
+         HERO
+         ========================================================= */
+
+      .events-hero {
+        position: relative;
+        min-height: 650px;
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+
+        background: var(--deep);
+        color: #fff;
+      }
+
+      .events-hero-media {
+        position: absolute;
+        inset: 0;
+
+        background:
+          linear-gradient(
+            90deg,
+            rgba(10, 23, 17, 0.9) 0%,
+            rgba(10, 23, 17, 0.54) 48%,
+            rgba(10, 23, 17, 0.14) 100%
+          ),
+          url("assets/Images/Imagens redimensionas/CLF_5532.jpg") center / cover no-repeat;
+      }
+
+      .events-hero-content {
+        position: relative;
+        z-index: 1;
+
+        width: min(1180px, calc(100% - 64px));
+        margin: 0 auto;
+
+        padding: 150px 0 90px;
+      }
+
+      .page-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        margin-bottom: 30px;
+
+        color: rgba(255, 255, 255, 0.72);
+
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+
+        transition: color 0.2s;
+      }
+
+      .page-back:hover {
+        color: #fff;
+      }
+
+      .page-back span {
+        font-size: 17px;
+      }
+
+      .events-hero h1 {
+        max-width: 900px;
+
+        margin: 0;
+
+        font-family: var(--display);
+        font-size: clamp(55px, 8vw, 105px);
+        font-weight: 500;
+
+        letter-spacing: -0.055em;
+        line-height: 0.92;
+      }
+
+      .events-hero h1 em {
+        color: var(--gold);
+        font-weight: 500;
+      }
+
+      .events-hero-copy {
+        max-width: 550px;
+
+        margin: 30px 0 0;
+
+        color: rgba(255, 255, 255, 0.82);
+
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      /* =========================================================
+         INFORMAÇÕES
+         ========================================================= */
+
+      .events-message {
+        padding: 130px 0;
+
+        background: var(--cream);
+      }
+
+      .events-message-inner {
+        max-width: 860px;
+      }
+
+      .events-message h2 {
+        max-width: 760px;
+        margin: 18px 0 26px;
+      }
+
+      .events-message-copy {
+        max-width: 720px;
+        margin: 0;
+
+        color: #536259;
+        font-size: 18px;
+        line-height: 1.7;
+      }
+
+      .events-arrival-notice {
+        max-width: 720px;
+        margin: 38px 0 32px;
+        padding: 28px 30px;
+
+        border-left: 4px solid var(--gold);
+        background: var(--deep);
+        color: #fff;
+      }
+
+      .events-arrival-notice span,
+      .events-arrival-notice strong {
+        display: block;
+      }
+
+      .events-arrival-notice span {
+        margin-bottom: 8px;
+
+        color: var(--gold);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .events-arrival-notice strong {
+        margin-bottom: 6px;
+
+        font-size: 21px;
+        font-weight: 500;
+      }
+
+      .events-arrival-notice p {
+        margin: 0;
+
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      /* =========================================================
+         INTRODUÇÃO
+         ========================================================= */
+
+      .events-intro {
+        display: grid;
+        grid-template-columns: 100px 1fr 1fr;
+
+        gap: 38px;
+
+        padding-top: 130px;
+        padding-bottom: 115px;
+      }
+
+      .events-intro-copy {
+        grid-column: 2 / 4;
+        max-width: 850px;
+      }
+
+      .events-intro-copy h2 {
+        margin: 18px 0 27px;
+      }
+
+      .events-intro-copy p:not(.eyebrow) {
+        max-width: 720px;
+
+        margin: 0;
+
+        color: #536259;
+
+        font-size: 18px;
+        line-height: 1.7;
+      }
+
+      /* =========================================================
+         OCASIÕES
+         ========================================================= */
+
+      .occasions {
+        padding: 120px 0 140px;
+
+        background: var(--sand);
+      }
+
+      .occasions-head {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+
+        gap: 38px;
+
+        margin-bottom: 60px;
+      }
+
+      .occasions-title h2 {
+        max-width: 780px;
+
+        margin: 18px 0 0;
+      }
+
+      .occasions-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 16px;
+      }
+
+      .occasion-card {
+        min-height: 390px;
+
+        padding: 35px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        background: var(--cream);
+
+        border: 1px solid rgba(19, 48, 36, 0.08);
+      }
+
+      .occasion-number {
+        margin-bottom: auto;
+
+        color: var(--gold);
+
+        font-size: 11px;
+        font-weight: 700;
+
+        letter-spacing: 0.15em;
+      }
+
+      .occasion-card h3 {
+        margin: 0 0 15px;
+
+        font-family: var(--display);
+
+        font-size: 35px;
+        font-weight: 500;
+
+        line-height: 1;
+      }
+
+      .occasion-card p {
+        margin: 0;
+
+        color: #536259;
+
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      /* =========================================================
+         CENÁRIO
+         ========================================================= */
+
+      .events-scenery {
+        padding: 135px 0 150px;
+      }
+
+      .events-scenery-head {
+        display: grid;
+        grid-template-columns: 100px 1fr 1fr;
+
+        gap: 38px;
+
+        margin-bottom: 60px;
+      }
+
+      .events-scenery-title {
+        grid-column: 2 / 4;
+      }
+
+      .events-scenery-title h2 {
+        max-width: 850px;
+
+        margin: 18px 0 0;
+      }
+
+      .events-scenery-visual {
+        position: relative;
+
+        min-height: 610px;
+
+        overflow: hidden;
+
+        background: var(--deep);
+      }
+
+      .events-scenery-visual img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        transition: transform 0.7s ease;
+      }
+
+      .events-scenery-visual:hover img {
+        transform: scale(1.025);
+      }
+
+      .events-scenery-caption {
+        position: absolute;
+
+        right: 35px;
+        bottom: 35px;
+
+        max-width: 410px;
+
+        padding: 30px;
+
+        background: rgba(10, 23, 17, 0.88);
+
+        color: #fff;
+
+        backdrop-filter: blur(10px);
+      }
+
+      .events-scenery-caption span {
+        display: block;
+
+        margin-bottom: 10px;
+
+        color: var(--gold);
+
+        font-size: 10px;
+        font-weight: 700;
+
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .events-scenery-caption strong {
+        display: block;
+
+        font-family: var(--display);
+
+        font-size: 28px;
+        font-weight: 500;
+
+        line-height: 1.15;
+      }
+
+      /* =========================================================
+         GASTRONOMIA
+         ========================================================= */
+
+      .events-gastronomy {
+        padding: 115px 0;
+
+        background: var(--deep);
+
+        color: #fff;
+      }
+
+      .events-gastronomy-grid {
+        display: grid;
+        grid-template-columns: 100px 1fr 1fr;
+
+        gap: 38px;
+      }
+
+      .events-gastronomy-copy {
+        grid-column: 2 / 4;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 70px;
+      }
+
+      .events-gastronomy-copy h2 {
+        margin: 18px 0 25px;
+      }
+
+      .events-gastronomy-copy p:not(.eyebrow) {
+        margin: 0;
+
+        color: rgba(255, 255, 255, 0.7);
+
+        font-size: 16px;
+        line-height: 1.75;
+      }
+
+      .events-gastronomy-action {
+        align-self: end;
+      }
+
+      .events-gastronomy-action span {
+        display: block;
+
+        margin-bottom: 15px;
+
+        color: var(--gold);
+
+        font-size: 10px;
+        font-weight: 700;
+
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .events-gastronomy-action p {
+        margin-bottom: 25px !important;
+      }
+
+      /* =========================================================
+         COMO FUNCIONA
+         ========================================================= */
+
+      .events-contact {
+        padding: 130px 0;
+      }
+
+      .events-contact-grid {
+        display: grid;
+        grid-template-columns: 100px 1fr 1fr;
+
+        gap: 38px;
+      }
+
+      .events-contact-copy {
+        grid-column: 2 / 4;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 70px;
+      }
+
+      .events-contact-copy h2 {
+        margin: 18px 0 25px;
+      }
+
+      .events-contact-copy p:not(.eyebrow) {
+        max-width: 500px;
+
+        margin: 0;
+
+        color: #536259;
+
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .contact-steps {
+        display: grid;
+
+        gap: 24px;
+      }
+
+      .contact-step {
+        padding-top: 18px;
+
+        border-top: 1px solid var(--line);
+      }
+
+      .contact-step span {
+        display: block;
+
+        margin-bottom: 8px;
+
+        color: var(--muted);
+
+        font-size: 10px;
+        font-weight: 700;
+
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .contact-step strong {
+        display: block;
+
+        font-family: var(--display);
+
+        font-size: 22px;
+        font-weight: 500;
+      }
+
+      .contact-step p {
+        margin-top: 7px !important;
+
+        font-size: 14px !important;
+      }
+
+      /* =========================================================
+         CTA
+         ========================================================= */
+
+      .events-cta {
+        padding: 120px 0;
+
+        background: var(--sand);
+      }
+
+      .events-cta-inner {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+
+        gap: 38px;
+      }
+
+      .events-cta-content {
+        max-width: 850px;
+      }
+
+      .events-cta-content h2 {
+        margin: 18px 0 25px;
+      }
+
+      .events-cta-content p {
+        max-width: 600px;
+
+        margin: 0 0 30px;
+
+        color: #536259;
+
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .events-cta-actions {
+        display: flex;
+        align-items: center;
+
+        gap: 25px;
+      }
+
+      /* =========================================================
+         RESPONSIVO
+         ========================================================= */
+
+      @media (max-width: 800px) {
+
+        .events-hero {
+          min-height: 620px;
+        }
+
+        .events-hero-content {
+          width: min(100% - 40px, 620px);
+
+          padding: 125px 0 65px;
+        }
+
+        .events-hero h1 {
+          font-size: clamp(50px, 15vw, 72px);
+        }
+
+        .events-hero-copy {
+          font-size: 16px;
+        }
+
+        .events-message {
+          padding: 85px 0;
+        }
+
+        .events-message-copy {
+          font-size: 16px;
+        }
+
+        .events-arrival-notice {
+          padding: 24px;
+        }
+
+        .events-intro {
+          grid-template-columns: 1fr;
+
+          gap: 22px;
+
+          padding-top: 90px;
+          padding-bottom: 80px;
+        }
+
+        .events-intro-copy {
+          grid-column: auto;
+        }
+
+        .occasions {
+          padding: 85px 0;
+        }
+
+        .occasions-head {
+          grid-template-columns: 1fr;
+
+          gap: 22px;
+
+          margin-bottom: 40px;
+        }
+
+        .occasions-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .occasion-card {
+          min-height: 300px;
+        }
+
+        .events-scenery {
+          padding: 90px 0;
+        }
+
+        .events-scenery-head {
+          grid-template-columns: 1fr;
+
+          gap: 22px;
+
+          margin-bottom: 45px;
+        }
+
+        .events-scenery-title {
+          grid-column: auto;
+        }
+
+        .events-scenery-visual {
+          min-height: 480px;
+        }
+
+        .events-scenery-caption {
+          right: 20px;
+          bottom: 20px;
+          left: 20px;
+        }
+
+        .events-gastronomy {
+          padding: 85px 0;
+        }
+
+        .events-gastronomy-grid {
+          grid-template-columns: 1fr;
+
+          gap: 22px;
+        }
+
+        .events-gastronomy-copy {
+          grid-column: auto;
+
+          grid-template-columns: 1fr;
+
+          gap: 40px;
+        }
+
+        .events-contact {
+          padding: 90px 0;
+        }
+
+        .events-contact-grid {
+          grid-template-columns: 1fr;
+
+          gap: 22px;
+        }
+
+        .events-contact-copy {
+          grid-column: auto;
+
+          grid-template-columns: 1fr;
+
+          gap: 45px;
+        }
+
+        .events-cta {
+          padding: 85px 0;
+        }
+
+        .events-cta-inner {
+          grid-template-columns: 1fr;
+
+          gap: 22px;
+        }
+
+        .events-cta-actions {
+          align-items: flex-start;
+
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+
+  <body class="events-page">
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header" id="topo">
+
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Recanto Fábio — início"
+      >
+        <span>
+          <img src="assets/Icons/Logo_Restaurante_Recanto_Fábio_0,5.png" alt="Logotipo do Recanto Fábio" />
+        </span>
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <span class="sr-only">
+          Abrir menu
+        </span>
+      </button>
+
+
+      <nav
+        class="main-nav"
+        id="main-nav"
+        aria-label="Principal"
+      >
+        <a href="index.html">Início</a>
+        <a href="gastronomia.html">Gastronomia</a>
+        <a href="recanto.html">O Recanto</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+
+
+      <a
+        class="header-action"
+        href="https://wa.me/5547988638713"
+        target="_blank"
+        rel="noreferrer"
+      >
+        WhatsApp
+      </a>
+
+    </header>
+
+
+    <main>
+
+      <!-- =====================================================
+           HERO
+           ===================================================== -->
+
+      <section class="events-hero">
+
+        <div class="events-hero-media"></div>
+
+
+        <div class="events-hero-content">
+
+          <a
+            class="page-back"
+            href="index.html"
+          >
+            <span>←</span>
+            Voltar ao início
+          </a>
+
+
+          <p class="eyebrow eyebrow-light">
+            Eventos
+          </p>
+
+
+          <h1>
+            CELEBRE MOMENTOS<br />
+            QUE MERECEM FICAR.
+          </h1>
+
+
+          <p class="events-hero-copy">
+            Um cenário especial à beira-mar para encontros,
+            celebrações e ocasiões que pedem algo diferente.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <section class="events-message">
+        <div class="page-width events-message-inner">
+          <p class="eyebrow">Eventos no Recanto</p>
+          <h2>ENCONTROS ESPECIAIS<br />PEDEM UMA BOA CONVERSA.</h2>
+          <p class="events-message-copy">
+            Para celebrar momentos especiais no Recanto Fábio, fale com a
+            nossa equipe pelo WhatsApp. Vamos entender o seu encontro e
+            orientar você da melhor forma.
+          </p>
+          <aside class="events-arrival-notice" aria-label="Informação sobre atendimento no restaurante">
+            <span>Para o restaurante</span>
+            <strong>Atendimento por ordem de chegada.</strong>
+            <p>Não realizamos reservas para o salão.</p>
+          </aside>
+          <a class="button button-dark" href="https://wa.me/5547988638713" target="_blank" rel="noreferrer">
+            Falar pelo WhatsApp <span>↗</span>
+          </a>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           OCASIÕES
+           ===================================================== -->
+
+      <section class="occasions" hidden>
+
+        <div class="page-width">
+
+          <div class="occasions-head">
+
+            <div class="occasions-title">
+
+              <p class="eyebrow">
+                Para cada ocasião
+              </p>
+
+
+              <h2>
+                Encontros diferentes,<br />
+                <em>uma experiência especial.</em>
+              </h2>
+
+            </div>
+
+          </div>
+
+
+          <div class="occasions-grid">
+
+            <!-- FAMÍLIA -->
+
+            <article class="occasion-card">
+
+              <span class="occasion-number">
+                02 / 01
+              </span>
+
+
+              <div>
+
+                <h3>
+                  Celebrações
+                </h3>
+
+
+                <p>
+                  Aniversários, encontros de família e outros
+                  momentos especiais podem ganhar um cenário
+                  à altura da ocasião.
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <!-- EMPRESARIAL -->
+
+            <article class="occasion-card">
+
+              <span class="occasion-number">
+                02 / 02
+              </span>
+
+
+              <div>
+
+                <h3>
+                  Corporativo
+                </h3>
+
+
+                <p>
+                  Um ambiente diferente para reunir equipes,
+                  parceiros e convidados em torno de uma
+                  experiência gastronômica.
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <!-- GRUPOS -->
+
+            <article class="occasion-card">
+
+              <span class="occasion-number">
+                02 / 03
+              </span>
+
+
+              <div>
+
+                <h3>
+                  Encontros
+                </h3>
+
+
+                <p>
+                  Para grupos e ocasiões especiais em que
+                  o momento pede boa gastronomia, paisagem
+                  e companhia.
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           CENÁRIO
+           ===================================================== -->
+
+      <section class="events-scenery page-width" hidden>
+
+        <div class="events-scenery-head">
+
+          <div class="events-scenery-title">
+
+            <p class="eyebrow">
+              O espaço
+            </p>
+
+
+            <h2>
+              Quando a paisagem<br />
+              também é parte da celebração.
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="events-scenery-visual">
+
+          <img
+            src="assets/Images/Imagens redimensionas/DJI_20240322193829_0525_D.jpg"
+            alt="Paisagem da Praia da Ilhota próxima ao Recanto Fábio"
+          />
+
+
+          <div class="events-scenery-caption">
+
+            <span>
+              Praia da Ilhota
+            </span>
+
+
+            <strong>
+              Um cenário natural<br />
+              para momentos especiais.
+            </strong>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           GASTRONOMIA
+           ===================================================== -->
+
+      <section class="events-gastronomy" hidden>
+
+        <div class="page-width events-gastronomy-grid">
+
+          <div class="events-gastronomy-copy">
+
+            <div>
+
+              <p class="eyebrow eyebrow-light">
+                Gastronomia
+              </p>
+
+
+              <h2>
+                A mesa também<br />
+                faz parte do momento.
+              </h2>
+
+
+              <p>
+                Uma celebração ganha outro significado quando
+                a gastronomia faz parte da experiência.
+                Conheça nossa cozinha e descubra as opções
+                disponíveis no Recanto.
+              </p>
+
+            </div>
+
+
+            <div class="events-gastronomy-action">
+
+              <span>
+                Conheça
+              </span>
+
+
+              <p>
+                Consulte nossa equipe para informações
+                específicas sobre eventos e opções
+                gastronômicas.
+              </p>
+
+
+              <a
+                class="button button-light"
+                href="gastronomia.html"
+              >
+                Ver gastronomia
+                <span>↗</span>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           CONTATO
+           ===================================================== -->
+
+      <section class="events-contact" hidden>
+
+        <div class="page-width events-contact-grid">
+
+          <div class="events-contact-copy">
+
+            <div>
+
+              <p class="eyebrow">
+                Vamos conversar
+              </p>
+
+
+              <h2>
+                Seu evento começa<br />
+                <em>por uma conversa.</em>
+              </h2>
+
+
+              <p>
+                Como cada ocasião possui necessidades diferentes,
+                entre em contato com nossa equipe para conversar
+                sobre sua ideia e verificar as possibilidades.
+              </p>
+
+            </div>
+
+
+            <div class="contact-steps">
+
+              <div class="contact-step">
+
+                <span>
+                  01 · Entre em contato
+                </span>
+
+
+                <strong>
+                  WhatsApp
+                </strong>
+
+
+                <p>
+                  Fale diretamente com nossa equipe.
+                </p>
+
+              </div>
+
+
+              <div class="contact-step">
+
+                <span>
+                  02 · Conte sua ideia
+                </span>
+
+
+                <strong>
+                  Sua ocasião
+                </strong>
+
+
+                <p>
+                  Informe o tipo de evento e o que você
+                  está planejando.
+                </p>
+
+              </div>
+
+
+              <div class="contact-step">
+
+                <span>
+                  03 · Vamos conversar
+                </span>
+
+
+                <strong>
+                  Possibilidades
+                </strong>
+
+
+                <p>
+                  Nossa equipe poderá orientar você
+                  sobre as opções disponíveis.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           CTA
+           ===================================================== -->
+
+      <section class="events-cta" hidden>
+
+        <div class="page-width events-cta-inner">
+
+          <div class="events-cta-content">
+
+            <p class="eyebrow">
+              Eventos no Recanto Fábio
+            </p>
+
+
+            <h2>
+              Vamos conversar<br />
+              sobre o seu momento?
+            </h2>
+
+
+            <p>
+              Entre em contato pelo WhatsApp e conte para
+              nossa equipe o que você está planejando.
+            </p>
+
+
+            <div class="events-cta-actions">
+
+              <a
+                class="button button-dark"
+                href="https://wa.me/5547988638713"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Falar pelo WhatsApp
+                <span>↗</span>
+              </a>
+
+
+              <a
+                class="text-link"
+                href="contato.html"
+              >
+                Ver contato e localização
+                <span>→</span>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+      <div class="page-width footer-main">
+
+        <a
+          class="brand brand-footer"
+          href="index.html"
+        >
+          <span><img src="assets/Icons/Logo_Restaurante_Recanto_Fábio_0,5.png" alt="Logotipo do Recanto Fábio" /></span>
+        </a>
+
+
+        <p>
+          Gastronomia, mar e encontros especiais<br />
+          na Praia da Ilhota.
+        </p>
+
+
+        <div class="footer-links">
+          <a href="https://www.instagram.com/recantorestaurantefabio/" target="_blank" rel="noreferrer">Instagram ↗</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Recanto+Fabio+Itapema" target="_blank" rel="noreferrer">R. 1106, 300 · Ilhota ↗</a>
+          <a href="https://wa.me/5547988638713" target="_blank" rel="noreferrer">WhatsApp (47) 9 8863-8713 ↗</a>
+        </div>
+
+      </div>
+
+
+      <div class="page-width footer-bottom">
+
+        <span>
+          © <span id="year"></span> Recanto Fábio
+        </span>
+
+
+        <span>
+          Itapema · SC
+        </span>
+
+      </div>
+
+    </footer>
+
+
+    <script src="script.js?v=site-20260903b"></script>
+
+  </body>
+</html>
